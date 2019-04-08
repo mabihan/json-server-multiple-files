@@ -23,6 +23,9 @@ Using json-server to server multiples json files in less than *45 seconds* (trus
 🥁    Endpoint : http://localhost:3002/tenders
 ````
 
+## Todo
+- Check the json format, and remove json that does not match.
+
 ## Built With
 - [typicode/json-server](https://github.com/typicode/json-server)
 
