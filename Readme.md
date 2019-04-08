@@ -1,6 +1,6 @@
-# 🚤 json-server-multiples-files
+# 🚤 json-server-multiple-files
 
-Using json-server to server multiples json files in less than *45 seconds* (trust me).
+Using json-server to server multiple json files in less than *45 seconds* (trust me).
 
 ## Json format supported
 ````
