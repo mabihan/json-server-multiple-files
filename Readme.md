@@ -2,8 +2,26 @@
 
 Using json-server to server multiples json files in less than *45 seconds* (trust me).
 
+## Json format supported
+````
+{
+  "ressource" : [
+    {
+      "key": "barcelona",
+      "name": "Barcelona",
+      "code": "BAR"
+    },
+    {
+      "key": "espanyol",
+      "name": "Espanyol",
+      "code": "ESP"
+    }
+  ]
+}
+````
+
 ## Getting Started
-1. Place your .json files into the `db` folder
+1. Place your .json files into the `db` folder (⚠️ make sure they match the format)
 2. Install dependencies with `npm install`
 3. Run the server : `npm run start:server`
 
