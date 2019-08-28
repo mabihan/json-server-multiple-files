@@ -2,7 +2,7 @@
 
 Using json-server to server multiple json files in less than *45 seconds* (trust me).
 
-````
+
 ## Prequisite
 - nodemon `sudo npm install -g nodemon`
 
