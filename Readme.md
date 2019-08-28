@@ -2,23 +2,9 @@
 
 Using json-server to server multiple json files in less than *45 seconds* (trust me).
 
-## Json format supported
 ````
-{
-  "ressource" : [
-    {
-      "key": "barcelona",
-      "name": "Barcelona",
-      "code": "BAR"
-    },
-    {
-      "key": "espanyol",
-      "name": "Espanyol",
-      "code": "ESP"
-    }
-  ]
-}
-````
+## Prequisite
+- nodemon `sudo npm install -g nodemon`
 
 ## Getting Started
 1. Place your .json files into the `db` folder (⚠️ make sure they match the format)
