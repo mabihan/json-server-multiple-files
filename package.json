@@ -4,7 +4,7 @@
   "description": "A way to serve multiple json files using the json-server package",
   "main": "json-server.index.js",
   "scripts": {
-    "start:server": "nodemon --watch test/mock json-server.index.js"
+    "start": "nodemon --watch test/mock json-server.index.js"
   },
   "repository": {
     "type": "git",
