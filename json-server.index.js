@@ -20,7 +20,9 @@ files.forEach((file) => {
     jsonObject = JSON.parse(fs.readFileSync('./db/' + file));
 
     if( isJson(fs.readFileSync('./db/' + file))) {
-      endpoints.push(Object.keys(jsonObject)[0]);
+      Object.keys(jsonObject).forEach(function(idx) {
+           endpoints.push(idx);
+      });
       console.log('🗒    JSON file loaded : ' + file);
       _.extend(obj, require(path.resolve(__dirname, './db/', file)));
     }
