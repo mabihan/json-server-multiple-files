@@ -9,7 +9,7 @@ Using json-server to server multiple json files in less than *45 seconds* (trust
 ## Getting Started
 1. Place your .json files into the `db` folder (⚠️ make sure they match the format)
 2. Install dependencies with `npm install`
-3. Run the server : `npm run start:server`
+3. Run the server : `npm run start`
 
 ## Output
 ````
