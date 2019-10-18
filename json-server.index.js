@@ -29,13 +29,19 @@ files.forEach((file) => {
   }
 })
 
-const router = jsonServer.router(obj)
+const objOrdered = {};
+Object.keys(obj).sort().forEach(function(key) {
+  objOrdered[key] = obj[key];
+});
+
+const router = jsonServer.router(objOrdered)
 
 server.use(jsonServer.defaults())
 server.use(router)
 
 server.listen(port, () => {
   console.log('\n⛴    JSON Server is running at http://localhost:' + port );
+  endpoints.sort();
   for (var i = 0; i < endpoints.length; i++) {
     console.info('🥁    Endpoint : http://localhost:' + port + '/' + endpoints[i]);
   }
