@@ -20,20 +20,28 @@ files.forEach((file) => {
     jsonObject = JSON.parse(fs.readFileSync('./db/' + file));
 
     if( isJson(fs.readFileSync('./db/' + file))) {
-      endpoints.push(Object.keys(jsonObject)[0]);
+      Object.keys(jsonObject).forEach(function(idx) {
+           endpoints.push(idx);
+      });
       console.log('🗒    JSON file loaded : ' + file);
       _.extend(obj, require(path.resolve(__dirname, './db/', file)));
     }
   }
 })
 
-const router = jsonServer.router(obj)
+const objOrdered = {};
+Object.keys(obj).sort().forEach(function(key) {
+  objOrdered[key] = obj[key];
+});
+
+const router = jsonServer.router(objOrdered)
 
 server.use(jsonServer.defaults())
 server.use(router)
 
 server.listen(port, () => {
   console.log('\n⛴    JSON Server is running at http://localhost:' + port );
+  endpoints.sort();
   for (var i = 0; i < endpoints.length; i++) {
     console.info('🥁    Endpoint : http://localhost:' + port + '/' + endpoints[i]);
   }
